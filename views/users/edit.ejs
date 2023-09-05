@@ -1,0 +1,19 @@
+<h1>Manage Account</h1>
+<form action="<%= action %>" method="<%= method %>">
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" value="<%= currentUser.username ? currentUser.username : "" %>"
+      disabled>
+  </div>
+  <div>
+    <label for="password">Old Password:</label>
+    <input type="password" name="oldPassword" id="oldPassword">
+  </div>
+  <div>
+    <label for="newPassword">New Password:</label>
+    <input type="password" name="newPassword" id="newPassword">
+  </div>
+  </div>
+  <a href="/user/<%= currentUser._id %>/delete"><button type="button">Delete Account</button></a>
+  <button type="submit">Change Password</button>
+</form>

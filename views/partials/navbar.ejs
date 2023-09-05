@@ -1,0 +1,13 @@
+<header>
+  <nav>
+    <a href="/"><button>Home</button></a>
+    <!-- currentUser is at res.locals.currentUser -->
+    <% if ( !currentUser ) { %>
+      <a href="/user/register"><button>Register</button></a>
+      <a href="/user/login"><button>Login</button></a>
+      <% } else { %>
+        <a href="/user/<%= currentUser._id %>/edit"><button>Manage Account</button></a>
+        <a href="/user/logout"><button>Logout</button></a>
+        <% } %>
+  </nav>
+</header>
